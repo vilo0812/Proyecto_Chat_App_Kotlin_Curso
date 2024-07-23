@@ -18,16 +18,16 @@ class SplashScreen : AppCompatActivity() {
            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        MostrarBienvenida()
+        mostrarBienvenida()
     }
-    fun MostrarBienvenida(){
+    private fun mostrarBienvenida(){
         object : CountDownTimer(3000,1000){
             override fun onTick(p0: Long) {
                 //TODO("Not yet implemented")
             }
 
             override fun onFinish() {
-                val intent = Intent(applicationContext, MainActivity::class.java)
+                val intent = Intent(applicationContext, Inicio::class.java)
                 startActivity(intent)
                 finish()
             }
